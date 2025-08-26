@@ -15,12 +15,12 @@ export default function HomeControler() {
     useContext(contextOpenCreate);
   const [data, setdata] = useState([]);
 
-  const fetch = () => {
-    axios
-      .get("https://backendbag-1.onrender.com/")
-      .then((res) => setdata(res.data))
-      .catch((err) => console.log(err));
-  };
+ const fetch = () => {
+  axios
+    .get("https://backendbag-1.onrender.com/", { withCredentials: true })
+    .then((res) => setdata(res.data))
+    .catch((err) => console.log(err));
+};
 
   useEffect(() => {
     fetch();
@@ -38,9 +38,9 @@ export default function HomeControler() {
 
   function HandleDelete(id) {
     axios
-      .delete(`https://backendbag-1.onrender.com/delete/${id}`)
-      .then(() => fetch())
-      .catch((err) => console.log(err));
+  .delete(`https://backendbag-1.onrender.com/delete/${id}`, { withCredentials: true })
+  .then(() => fetch())
+  .catch((err) => console.log(err));
   }
 
   function handleLogout() {
