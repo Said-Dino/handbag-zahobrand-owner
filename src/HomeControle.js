@@ -7,7 +7,7 @@ import { contextOpenCreate } from "./Context/openContextCreate";
 import { IoBagAdd } from "react-icons/io5";
 import { IoMdHome } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
-import "./homeControler.css"; // <-- styles avec d-
+import "./homeControler.css";
 
 export default function HomeControler() {
   const navigate = useNavigate();
@@ -15,13 +15,15 @@ export default function HomeControler() {
     useContext(contextOpenCreate);
   const [data, setdata] = useState([]);
 
- const fetch = () => {
-  axios
-    .get("https://backendbag-1.onrender.com/", { withCredentials: true })
-    .then((res) => setdata(res.data))
-    .catch((err) => console.log(err));
-};
+  // ---------- FETCH DATA ----------
+  const fetch = () => {
+    axios
+      .get("https://backendbag-1.onrender.com/", { withCredentials: true })
+      .then((res) => setdata(res.data))
+      .catch((err) => console.log(err));
+  };
 
+  // ---------- CHECK AUTH ----------
   useEffect(() => {
     fetch();
     axios
@@ -34,13 +36,21 @@ export default function HomeControler() {
         }
       })
       .catch(() => setAuth(false));
-  }, []);
+  }, [setAuth]);
 
+  // ---------- REDIRECT IF NOT AUTH ----------
+  useEffect(() => {
+    if (auth === false) {
+      navigate("/", { replace: true });
+    }
+  }, [auth, navigate]);
+
+  // ---------- HANDLERS ----------
   function HandleDelete(id) {
     axios
-  .delete(`https://backendbag-1.onrender.com/delete/${id}`, { withCredentials: true })
-  .then(() => fetch())
-  .catch((err) => console.log(err));
+      .delete(`https://backendbag-1.onrender.com/delete/${id}`, { withCredentials: true })
+      .then(() => fetch())
+      .catch((err) => console.log(err));
   }
 
   function handleLogout() {
@@ -65,7 +75,7 @@ export default function HomeControler() {
     e.preventDefault();
     axios
       .post(
-        "https://backendbag-1.onrender.com/log" ,
+        "https://backendbag-1.onrender.com/log",
         {
           email: valueLog.email,
           password: valueLog.password,
@@ -80,6 +90,12 @@ export default function HomeControler() {
         }
       })
       .catch((err) => console.log(err));
+  }
+
+  // ---------- RENDER ----------
+  if (auth === false) {
+    // Empêche le flash de la page avant le redirect
+    return null;
   }
 
   return (
