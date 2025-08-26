@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/handbag-zahobrand-owner.git/static/css/main.0604dd8a.css",
+    "main.js": "/handbag-zahobrand-owner.git/static/js/main.e96838e3.js",
+    "static/js/453.af4c11e6.chunk.js": "/handbag-zahobrand-owner.git/static/js/453.af4c11e6.chunk.js",
+    "static/media/bb.jpg": "/handbag-zahobrand-owner.git/static/media/bb.2e2dbbde577cffc2192d.jpg",
+    "index.html": "/handbag-zahobrand-owner.git/index.html",
+    "main.0604dd8a.css.map": "/handbag-zahobrand-owner.git/static/css/main.0604dd8a.css.map",
+    "main.e96838e3.js.map": "/handbag-zahobrand-owner.git/static/js/main.e96838e3.js.map",
+    "453.af4c11e6.chunk.js.map": "/handbag-zahobrand-owner.git/static/js/453.af4c11e6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0604dd8a.css",
+    "static/js/main.e96838e3.js"
+  ]
+}
