@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/handbag-zahobrand-owner/static/css/main.0604dd8a.css",
-    "main.js": "/handbag-zahobrand-owner/static/js/main.b225da98.js",
+    "main.js": "/handbag-zahobrand-owner/static/js/main.7cbb7155.js",
     "static/js/453.af4c11e6.chunk.js": "/handbag-zahobrand-owner/static/js/453.af4c11e6.chunk.js",
     "static/media/bb.jpg": "/handbag-zahobrand-owner/static/media/bb.2e2dbbde577cffc2192d.jpg",
     "index.html": "/handbag-zahobrand-owner/index.html",
     "main.0604dd8a.css.map": "/handbag-zahobrand-owner/static/css/main.0604dd8a.css.map",
-    "main.b225da98.js.map": "/handbag-zahobrand-owner/static/js/main.b225da98.js.map",
+    "main.7cbb7155.js.map": "/handbag-zahobrand-owner/static/js/main.7cbb7155.js.map",
     "453.af4c11e6.chunk.js.map": "/handbag-zahobrand-owner/static/js/453.af4c11e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0604dd8a.css",
-    "static/js/main.b225da98.js"
+    "static/js/main.7cbb7155.js"
   ]
 }
