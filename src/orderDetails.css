@@ -1,0 +1,168 @@
+/* CONTENEUR PRINCIPAL */
+.o-order-container {
+  background: #f8dce7;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.o-header {
+  background: #faa1c3;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.o-header-title {
+  width: 30%;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin-left: 40px;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.o-header-buttons {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.o-btn-nav {
+  background: #ea4c88 !important;
+  color: white !important;
+  margin: 5px !important;
+  border-radius: 8px !important;
+  transition: 0.3s ease !important;
+}
+
+.o-btn-nav:hover {
+  background: #b7205a !important;
+  color: white !important;
+}
+
+/* ORDERS */
+.o-orders-list {
+  width: 100%;
+}
+
+.o-order-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.o-order-info {
+  margin-right: 50px;
+  background: #f1eaed;
+  width: 50%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 10px;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 5px black;
+  padding: 10px;
+  min-width: 280px;
+  transition: all 0.3s ease;
+}
+
+.o-order-field {
+  border: 1px solid #f35e97;
+  border-radius: 8px;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.o-order-img {
+  margin: 10px;
+  border-radius: 8px;
+  margin-top: 5px;
+  width: 255px;
+  max-width: 90%;
+  transition: all 0.3s ease;
+}
+
+/* DELETE BUTTON */
+.o-btn-delete {
+  margin: 5px !important;
+  color: black !important;
+  background: #fad7e6 !important;
+  margin-bottom: 40px !important;
+}
+
+.o-icon-delete {
+  color: #c42337;
+}
+
+/* LOGIN FORM */
+.o-login-box {
+  background: #ed98b7;
+  width: 40%;
+  margin: 200px auto 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.o-login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.o-input-field {
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.o-btn-confirm {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #de5288 !important;
+  color: white !important;
+  cursor: pointer;
+}
+
+/* 📱 RESPONSIVE */
+
+/* Tablettes */
+@media (max-width: 1024px) {
+  .o-header-title { width: 40%; margin-left: 20px; }
+  .o-header-buttons { width: 60%; }
+  .o-order-info { width: 70%; max-width: 400px; }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .o-header { flex-direction: column; text-align: center; }
+  .o-header-title { width: 80%; margin: 10px auto; }
+  .o-header-buttons { width: 100%; justify-content: center; flex-wrap: wrap; }
+  .o-order-card { flex-direction: column; align-items: center; border: solid 1px gray; }
+  .o-order-info { width: 90%; max-width: 350px; margin-right: 0; }
+  .o-order-img { width: 200px; }
+  .o-login-box { width: 80%; margin-top: 100px; }
+}
+
+/* Très petits écrans (<480px) */
+@media (max-width: 480px) {
+  .o-header-title { font-size: 16px; padding: 3px; }
+  .o-btn-nav { font-size: 12px !important; padding: 5px !important; }
+  .o-order-info { width: 95%; max-width: 100%; padding: 8px; }
+  .o-order-img { width: 150px; }
+  .o-login-box { width: 95%; margin-top: 80px; padding: 15px; }
+}

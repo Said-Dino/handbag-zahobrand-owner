@@ -1,0 +1,162 @@
+/* NAVBAR */
+.anavbar {
+  background: #faa1c3;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 90px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.abrand-title {
+  margin-left: 20px;
+  color: white;
+}
+
+.anav-links {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.alink-btn {
+  text-decoration: none;
+}
+
+.abtn-primary {
+  color: white !important;
+  background: #ea4c88 !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  border: none !important;
+}
+
+/* FORM LOGIN */
+.alogin-box {
+  position: fixed;
+  margin-left: 600px;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.aform {
+  align-items: center;
+  display: flex;
+}
+
+.ainput-field {
+  width: 20% ;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.abtn-confirm {
+  color: #ea4c88 !important;
+  background: white !important;
+  border-radius: 8px !important;
+  transition: 0.5s ease !important;
+}
+
+.abtn-confirm:hover {
+  background: #ea4c88 !important;
+  color: white !important;
+}
+
+/* IMAGE PRINCIPALE */
+.ahero-img {
+  width: 1256px;
+  margin-top: 90px; /* Pour éviter d’être cachée sous la navbar */
+}
+
+/* FOOTER */
+.afooter {
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+}
+
+@media (max-width:768px){
+    .anavbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+    .abtn-primary{
+        width: 10rem !important;
+    }
+    .ahero-img{
+        width: 100% !important;
+    }
+    .abrand-title{
+        font-size: 60px;
+        margin-top: 1%;
+        margin-bottom: -1%;
+        letter-spacing: 1rem;
+    }
+    .alogin-box {
+        position: fixed;
+        margin-left: 12rem;
+        width: 90%;
+        top:30px;
+    }
+}
+
+@media (max-width:480px){
+    .anavbar{
+        height: 6rem;
+    }
+     .anav-links{
+        width: 95%;       /* encore moins large pour écrans très petits */
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: 10px;
+    }
+    .abtn-primary{
+        width: 7rem !important;
+        font-size: 10px !important;
+    }
+    .ahero-img{
+        width: 100% !important;
+    }
+    .abrand-title{
+        font-size: 30px;
+        margin-top: 1%;
+        margin-bottom: -1%;
+        letter-spacing: 0.3rem;
+    }
+    .afooter {
+        height: 30px;
+    }
+    .afooter a h4 {
+        font-size: 11px;
+    }
+    .alogin-box {
+        position: fixed;
+        margin-left: 7rem;
+        width: 100%;
+        top:10px;
+    }
+    .ainput-field{
+        padding: 5px;
+        font-size: 13px;
+    }
+    .abtn-confirm{
+        font-size: 13px !important;
+        padding: 2px !important;
+    }
+}
