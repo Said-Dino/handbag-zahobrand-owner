@@ -70,18 +70,18 @@ export default function OrderDetails() {
       });
   }, []);
 
-  function handleLogout() {
-    axios
-      .get("https://backendbag-1.onrender.com/logout", { withCredentials: true })
-      .then((res) => {
-        if (res.data.Status === "success") {
-          window.location.reload(true);
-        } else {
-          alert("erro");
-        }
-      })
-      .catch((err) => console.log(err));
-  }
+  // function handleLogout() {
+  //   axios
+  //     .get("https://backendbag-1.onrender.com/logout", { withCredentials: true })
+  //     .then((res) => {
+  //       if (res.data.Status === "success") {
+  //         window.location.reload(true);
+  //       } else {
+  //         alert("erro");
+  //       }
+  //     })
+  //     .catch((err) => console.log(err));
+  // }
 
   return (
     <div>
@@ -105,13 +105,13 @@ export default function OrderDetails() {
                   Opération
                 </Button>
               </Link>
-              <Button
+              {/* <Button
                 onClick={handleLogout}
                 className="o-btn-nav"
                 variant="outlined"
               >
                 Logout
-              </Button>
+              </Button> */}
             </div>
           </div>
 
